@@ -20,6 +20,7 @@ model Users {
   name           String
   email          String           @unique
   password       String
+  token          String?          @db.Text
   created_at     DateTime         @default(now())
   transportation Transportation[]
 }
